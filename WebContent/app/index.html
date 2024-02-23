@@ -1,0 +1,141 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load index.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../style.css" type="text/css">
+
+
+    <title>Fabflix</title>
+    <link rel="icon" href="../img/favicon.ico" />
+</head>
+<body>
+    <div class="title_center">
+        <h1>Fabflix</h1>
+        <br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="top-20-rated.html">Top 20 Rated Movies</a>
+            </div>
+            <div class="col">
+                <div class="home-image">
+                    <a href="cart.html">
+                        <img src="../img/carts.png" alt="Cart" style="width:30px;height:30px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!--                                SEARCH COMPONENT                    -->
+
+    <br>
+    <span></span>
+    <hr>
+
+
+    <h2 class="text-center">Advanced Search</h2>
+    <span></span>
+
+    <div class="align-items-center justify-content-center">
+
+        <form class="form-inline" method="get" action="#">
+            <div class="form-group">
+                <label for="movie_title"><b>Title</b></label>
+                <input class="form-control" id="movie_title" placeholder="Movie Title" type="text">
+            </div>
+            <div class="form-group">
+                <label for="movie_year"><b>Year</b></label>
+                <input class="form-control" id="movie_year" placeholder="Release Year" type="number"
+                       maxlength="4" minlength="4">
+            </div>
+            <div class="form-group">
+                <label for="movie_director"><b>Director</b></label>
+                <input class="form-control" id="movie_director" placeholder="Director Name" type="text" >
+            </div>
+            <div class="form-group">
+                <label for="movie_star"><b>Star</b></label>
+                <input class="form-control" id="movie_star" placeholder="Star Name" type="text" >
+            </div>
+            <input type="button" class="btn btn-default" value="Search" onclick="submitSearch()">
+        </form>
+    </div>
+    <br>
+    <br>
+    <span></span>
+    <hr>
+
+
+    <!--                                SEARCH COMPONENT   END                 -->
+
+    <h2 class="text-center">Title Search</h2>
+    <div class="search-box">
+            <label for="autocomplete"><b>Title</b></label>
+            <input class="form-control" id="autocomplete" placeholder="Movie Title" type="text">
+            <input type="button" class="btn btn-default" value="Search"
+                   onclick="submitTitleSearch(document.getElementById('autocomplete').value.toString())">
+    </div>
+
+
+
+    <br>
+    <span></span>
+    <hr>
+
+    <!--
+                                  BROWSE COMPONENT   BEGIN - ALPHABETICAL                 -->
+    <div>
+        <h2 class="text-center">Browse - Alphabetical</h2>
+
+        <div class="grid-container" id="alphabetical_list"></div>
+    </div>
+
+    <br>
+    <br>
+    <span></span>
+    <hr>
+
+    <h2 class="text-center">Browse - Genre</h2>
+    <table id=genre_table class="table table-striped align-content-center align-items-center">
+        <thead>
+        <tr>
+            <th>Genre</th>
+        </tr>
+        </thead>
+        <tbody id=genre_list_table_body></tbody>
+    </table>
+    <br>
+    <br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

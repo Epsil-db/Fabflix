@@ -1,0 +1,317 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    padding: 15px;
+
+}
+
+.cart_home {
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+.top20_link {
+    width: 300px;
+    float:left; /* add this */
+}
+.home-image {
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+    align-content: center;
+    width: 80%;
+    background-color: white;
+}
+
+
+
+#bg {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title_center {
+    background: white;
+    border-radius: 10px;
+}
+
+.title_center h1 {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: rgb(248, 161, 69);
+}
+
+.title_center a {
+    align-content: center;
+}
+
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.center h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    color: rgb(248, 161, 69);
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-60%);
+    font-size: 14px;
+    pointer-events: none;
+
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2691d9;
+    transition: .5s;
+}
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+#login_submit{
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+#login_submit:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+/*Login Page Styling BEGIN*/
+
+/*Login Page Styling END*/
+
+.h1-title {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+}
+
+.padding-header {
+    padding-top: 10px;
+}
+
+#shopping_cart_table {
+    width: 100%;
+}
+
+.notification {
+    background-color: lightYellow;
+    color: red;
+    font-size: 16pt;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+.home-image img:hover {
+    opacity: 0.5;
+}
+
+.table-striped {
+    border-collapse: collapse;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    font-size: 0.9em;
+    overflow: hidden;
+    padding: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: break-word;
+}
+
+.table-striped tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(248, 161, 69);
+}
+
+.table-striped tbody th {
+    font-family: Roboto, sans-serif;
+    font-weight: lighter;
+}
+
+.table-striped thead {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    background-color: rgb(248, 161, 69);
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: #2196F3;
+    padding: 5px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+a:link {
+    color: #e67e00;
+}
+
+a:visited {
+    color: #e67e00;
+}
+
+body .column {
+    display: flex;
+    max-width: 80%;
+    padding-left: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitMovie, .submitStar {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.form header {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+.form label, .form input {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.form .btn {
+    align-items: center;
+}
+
+.form-inline {
+    text-align: center;
+    justify-content: center;
+    font-family: Roboto, sans-serif;
+}
+
+.form-inline label {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin: 5px 5px 5px;
+    font-size: 1.3em;
+}
+
+.form-inline input {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    margin-right: 15px;
+}
+
+.search-box .btn {
+    margin-left: 10px;
+}
+
+.h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+.back-button-div {
+    margin-left: 10%;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+}
+
+.search-box input {
+    font-weight: 300;
+    max-width: 300px;
+}
+
+.search-box label {
+    margin: 5px 5px 5px;
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; cursor: pointer }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: rgb(248, 161, 69); }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
